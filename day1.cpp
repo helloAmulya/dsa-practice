@@ -108,18 +108,37 @@ for (int i = 1; i <= 5; i++)
 
     bool isPrime = true;
 
-    for (int i = 2; i <= num - 1; i++)
+    // for (int i = 2; i <= num - 1; i++)
+    // {
+    //     if (num % i == 0)
+    //     {
+
+    //         isPrime = false;
+    //         break;
+    //     }
+
+    //     isPrime = true;
+    // }
+
+    // if (isPrime)
+    // {
+    //     cout << "is prime" << endl;
+    // }
+    // else
+    // {
+    //     cout << "not prime" << endl;
+    // }
+
+    // optimized solution
+    for (int i = 2; i * i < num; i++)
     {
+        // iterate upto small number
         if (num % i == 0)
         {
-
             isPrime = false;
             break;
         }
-
-        isPrime = true;
     }
-
     if (isPrime)
     {
         cout << "is prime" << endl;
@@ -128,9 +147,19 @@ for (int i = 1; i <= 5; i++)
     {
         cout << "not prime" << endl;
     }
-    
-    
-    
-    
+
+    // star pattern printing
+
+    for (int i = 0; i <= 5; i++)
+    {
+        int n = 5;
+        for (int j = 0; j <= n; j++)
+        {
+            cout << "*";
+        }
+        // cout<<"*";
+        cout << endl;
+    }
+
     return 0;
 }
