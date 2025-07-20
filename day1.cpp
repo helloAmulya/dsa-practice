@@ -1,7 +1,28 @@
 #include <iostream>
 using namespace std;
 
+int fib(int n)
+{
+    if (n <= 1)
+        return n;
+    return fib(n - 1) + fib(n - 2);
+}
+
+int fact(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    if (n == 1)
+    {
+        return 1;
+    }
+    return n * (fact(n - 1));
+}
+
 int main()
+
 {
 
     // conditional statements
@@ -160,6 +181,21 @@ for (int i = 1; i <= 5; i++)
         // cout<<"*";
         cout << endl;
     }
+
+    // factorial code using c++ recursion
+
+    int num1;
+    cout << "Enter the number of terms: ";
+    cin >> num1;
+
+    cout << "Fibonacci Series: ";
+    for (int i = 0; i < num1; i++)
+    {
+        cout << fib(i) << " ";
+    }
+    cout << endl;
+    cout << "Factorial Series: " << fact(num1) << endl;
+    ;
 
     return 0;
 }
