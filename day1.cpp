@@ -195,7 +195,7 @@ for (int i = 1; i <= 5; i++)
     }
     cout << endl;
     cout << "Factorial Series: " << fact(num1) << endl;
-    ;
+
 
     return 0;
 }
