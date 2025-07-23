@@ -23,7 +23,7 @@ int todecimal(int n)
     int pow = 1;
     while (n > 0)
     {
-        int rem = n % 10;
+        int rem = n % 10; // just a change of logic , replace 2 by 10 in the decimal to binary
         n /= 10;
         ans += rem * pow;
         pow *= 2;
