@@ -14,11 +14,21 @@ int tobinary(int n)
     }
     return ans;
 
-    // for (int i = 0; i <= n; i++)
-    // {
+    //  can also be done using for loop but while is more easy to implement
+}
 
-    //     ans += rem * (10 ^ i);
-    // }
+int todecimal(int n)
+{
+    int ans = 0;
+    int pow = 1;
+    while (n > 0)
+    {
+        int rem = n % 10;
+        n /= 10;
+        ans += rem * pow;
+        pow *= 2;
+    }
+    return ans;
 }
 
 int main()
@@ -28,7 +38,7 @@ int main()
 
     // 1. decimal to binary : front to back and back to front number display
 
-    int n;
+    int n, num;
     cout << "Enter a number : ";
     cin >> n;
 
@@ -38,6 +48,9 @@ int main()
         cout << tobinary(i) << endl;
     }
     cout << "single term :: " << tobinary(n) << endl;
+    cout << "Enter a binary number :: ";
+    cin >> num;
+    cout << "binary to decimal " << todecimal(num) << endl;
 
     return 0;
 }
