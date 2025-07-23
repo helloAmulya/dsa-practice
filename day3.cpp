@@ -37,6 +37,21 @@ float binomial(int n, int r)
     return (float)fact(n) / (fact(r) * fact(n - r));
 }
 
+// fibonacci series
+
+int fib(int n)
+{
+    if (n == 0)
+    {
+        return 0;
+    }
+    if (n == 1)
+    {
+        return 1;
+    }
+    return fib(n - 1) + fib(n - 2);
+}
+
 int main()
 {
     // functions basics
@@ -55,6 +70,11 @@ int main()
     cout << "sum upto " << n << " is :: " << printSum(n) << endl;
     cout << "factoraial upto " << n << " is :: " << fact(n) << endl;
     cout << "Binomial is :: " << binomial(n, r) << endl;
+    cout << "Fibonacci series :: ";
+    for (int i = 0; i < n; i++)
+    {
+        cout << fib(i) << " ";
+    }
 
     int num;
     cout << "Enter another number :: ";
