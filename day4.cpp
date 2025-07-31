@@ -41,6 +41,19 @@ bool checkP2(int n)
     // optimised way :     return (n > 0) && ((n & (n - 1)) == 0);
 }
 
+int numReverse(int n)
+{
+    int ans = 0;
+    while (n > 0)
+    {
+
+        int rem = n % 10;
+        n /= 10;
+        ans = ans * 10 + rem;
+    }
+    return ans;
+}
+
 int main()
 {
 
@@ -53,13 +66,16 @@ int main()
     cout << "Enter a number : ";
     cin >> c;
 
-    if (checkP2(c))
-    {
-        cout << "Number is a power of 2" << endl;
-    }
-    else
-    {
-        cout << "Number is NOT a power of 2" << endl;
-    }
+    // if (checkP2(c))
+    // {
+    //     cout << "Number is a power of 2" << endl;
+    // }
+    // else
+    // {
+    //     cout << "Number is NOT a power of 2" << endl;
+    // }
+
+    cout << "org num : " << c << " reversed : " << (numReverse(c)) << endl;
+
     return 0;
 }
