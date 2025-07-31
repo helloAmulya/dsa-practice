@@ -24,5 +24,9 @@ int main()
     cout << "the smallest is :: " << smallest << endl;
     cout << "the greatest is :: " << greatest << endl;
 
+
+    //  pass by reference
+    
+
     return 0;
 }
