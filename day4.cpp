@@ -28,6 +28,19 @@ using namespace std;
 
 */
 
+bool checkP2(int n)
+{
+    if (n <= 0)
+        return false;
+
+    while (n % 2 == 0)
+        n /= 2;
+
+    return n == 1;
+
+    // optimised way :     return (n > 0) && ((n & (n - 1)) == 0);
+}
+
 int main()
 {
 
@@ -37,8 +50,16 @@ int main()
     // cout << "right shifting a 2 times : " << (a >> 2) << endl;
 
     int c;
-    cout << "Enter a number : " << endl;
+    cout << "Enter a number : ";
     cin >> c;
 
+    if (checkP2(c))
+    {
+        cout << "Number is a power of 2" << endl;
+    }
+    else
+    {
+        cout << "Number is NOT a power of 2" << endl;
+    }
     return 0;
 }
