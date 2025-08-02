@@ -24,9 +24,26 @@ int main()
     cout << "the smallest is :: " << smallest << endl;
     cout << "the greatest is :: " << greatest << endl;
 
+    //  pass by reference, we pass the address i.e. real value
 
-    //  pass by reference
-    
+    // linear search
+
+    int target = 2;
+bool found = false;  // to check 
+
+    for (int i = 0; i < len; i++)
+    {
+        if (arr[i] == target)
+        {
+            cout << "The value is found in array at : " << i << endl;
+            found = true;
+            break;
+        }
+    }
+
+    if(!found){
+        cout<<"The value not found"<<endl;
+    }
 
     return 0;
 }
