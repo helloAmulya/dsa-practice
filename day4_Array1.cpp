@@ -29,7 +29,7 @@ int main()
     // linear search
 
     int target = 2;
-bool found = false;  // to check 
+    bool found = false; // to check
 
     for (int i = 0; i < len; i++)
     {
@@ -41,9 +41,29 @@ bool found = false;  // to check
         }
     }
 
-    if(!found){
-        cout<<"The value not found"<<endl;
+    if (!found)
+    {
+        cout << "The value not found" << endl;
     }
+
+    //  arrray reversal (using two pointer approach)
+
+    int s = 0;
+    int e = len - 1;
+
+    while (s < e)
+    {
+        // swap(arr[s], arr[e]);
+        // s++;
+        // e--;
+        swap(arr[s++], arr[e--]);
+    }
+    cout << "Reversed array : ";
+    for (int i = 0; i < len; i++)
+    {
+        cout << arr[i] << " ";
+    }
+    cout<<endl;
 
     return 0;
 }
