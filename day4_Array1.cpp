@@ -11,7 +11,7 @@ int main()
 
     int smallest = INT_MAX;
     int greatest = INT_MIN;
-    int arr[] = {342, 54, 35656, 56356, 4645442, 2, 32212, 2322};
+    int arr[] = {342, 54, 35656, 56356, 4645442, 2, 32212, 54, 2322};
     int len = sizeof(arr) / sizeof(arr[0]);
 
     for (int i = 0; i < len; i++)
@@ -95,6 +95,32 @@ int main()
         cout << arr[i] << " ";
     }
     cout << endl;
+
+    // print unique value (repeated  num)
+
+    // int count = 1;
+    
+    // for (int i = 1; i < len; i++)
+    // {
+    //     if (arr[i] == arr[i - 1])
+    //     {
+    //         count++;
+    //     }
+    //     else
+    //     {
+    //         if (count > 1)
+    //         {
+
+    //             cout << " unique value is : " << arr[i - 1] << "repeated " << count << " times" << endl;
+    //         }
+    //         count = 1;
+    //     }
+    // }
+
+    // if (count > 1)
+    // {
+    //     cout << "Value " << arr[len - 1] << " repeated " << count << " times" << endl;
+    // }
 
     return 0;
 }
