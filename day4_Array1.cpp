@@ -63,7 +63,38 @@ int main()
     {
         cout << arr[i] << " ";
     }
-    cout<<endl;
+    cout << endl;
+
+    // sum & product of all numbers
+
+    int sum = 0;
+    long long prod = 1; // do not initialise like prod = 0
+    for (int i = 0; i < len; i++)
+    {
+        sum += arr[i];
+        prod *= arr[i];
+    }
+    cout << "sum is :: " << sum << endl;
+    cout << "product is :: " << prod << endl;
+
+    //  swap min max of arr
+
+    cout << "swapped array : ";
+
+    for (int i = 0; i < len; i++)
+    {
+        if (arr[i] == smallest)
+        {
+            arr[i] = greatest;
+        }
+        else if (arr[i] == greatest)
+        {
+            arr[i] = smallest;
+        }
+        // swap(arr[i],greatest)
+        cout << arr[i] << " ";
+    }
+    cout << endl;
 
     return 0;
 }
