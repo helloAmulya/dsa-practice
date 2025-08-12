@@ -82,7 +82,7 @@ int main()
 
     vector<int> nums2 = {1, 2, 3, 4, 5};
 
-    reverseVector(nums2); 
+    reverseVector(nums2);
 
     cout << "Reversed vector: ";
     for (int i : nums2)
