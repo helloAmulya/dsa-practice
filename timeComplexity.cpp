@@ -9,7 +9,7 @@ int main()
     int ans = n * (n + 1) / 2;
     cout << ans;
 
-    // recurrece relation , recursion -> O(n)
+    // recurrence relation , recursion -> O(n)
     // total number of recursive calls -> recursive tree for calculating the complexity
 
 
@@ -32,6 +32,10 @@ int main()
 
 
     // space complexity can be defined as the SC = hight of the call stack * memory in each call
+
+    // fibonacci series tc -> O(2^n), a  golden ratio is also referred to the fibo complexity -> O(1.618^n)
+    // merger sort -> O(nlogn)
+    
 
 
 
