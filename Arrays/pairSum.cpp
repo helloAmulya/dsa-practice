@@ -50,7 +50,6 @@ vector<int> pairSumOp(vector<int> arr, int a)
 
     return ans;
 }
-
 int main()
 {
 
