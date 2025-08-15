@@ -29,6 +29,9 @@ int main()
 
     // 2. optimised approach
     int s = 0, e = n - 1;
+    //  this we have used two pointer approach, due to complexity of O(n) sinlge loop, as in brute force the TLE will come O(n^2)
+
+    // we know the width, calculate the minimum of the height of both points as the smaller one decides the area of the water
     while (s < e)
     {
         int width = e - s;
