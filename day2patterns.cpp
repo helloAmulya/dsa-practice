@@ -28,9 +28,10 @@ int main()
         }
         cout << ('*');
 
+        // in this loop we are printing the same stars just increasing the space based on the previous left star
         if (i != 0)
         {
-            for (int k = 0; k < 2 * i - 1; k++)
+            for (int k = 0; k < 2 * i - 1; k++) // this calculates the space from the start
             {
                 cout << " ";
             }
