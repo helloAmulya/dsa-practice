@@ -68,7 +68,7 @@ int main()
     // sum & product of all numbers
 
     int sum = 0;
-    long long prod = 1; // do not initialise like prod = 0
+    long long prod = 1; // do not initialise like prod = 0, on large value code will break
     for (int i = 0; i < len; i++)
     {
         sum += arr[i];

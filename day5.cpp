@@ -60,7 +60,7 @@ int main()
     // cout<< "capacity vec1 : " << vec1.capacity() << endl;
 
     vector<int> nums = {22, 22, 334, 334, 2};
-    cout << "single occuence :: " << singleNumber(nums) << endl;
+    cout << "single occurrence :: " << singleNumber(nums) << endl;
 
     // linear search in vector
     int key = 2;
