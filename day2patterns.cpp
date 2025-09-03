@@ -10,7 +10,7 @@ int main()
         later on divided in 3 parts - space/star/space
 
         combination of space decreasingg reverse pattern, then target spaces in the middle and then the space increasing pattern
-        (to complex to understand , see the execution)
+        (too complex to understand , see the execution)
 
     */
     int n;
