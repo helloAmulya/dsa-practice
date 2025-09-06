@@ -4,17 +4,20 @@ using namespace std;
 
 bool isPossible(vector<int> &arr, int n, int m, int maxTime)
 {
+
+    // here the mid is maxTime
     int painters = 1, time = 0;
     for (int i = 0; i < n; i++)
     {
         if (time + arr[i] <= maxTime)
+        //  time + arr[i] : 0 + 40 <= 70 (mid), true so we assign the time as 40 , then again add for -> 40 + 30 <= 70 , true, time  = 70 , now 70 + 10<=70 false, move to else
         {
-            time = arr[i];
+            time += arr[i];
         }
         else
         {
             painters++;
-            time += arr[i];
+            time = arr[i]; // reset the time to array value again if new/more painter needed
         }
     }
     return painters <= m;
@@ -23,7 +26,7 @@ bool isPossible(vector<int> &arr, int n, int m, int maxTime)
 int minTime(vector<int> &arr, int n, int m)
 {
     int sum = 0, maxVal = INT_MIN;
-    //  the answer will lie in minVal and maxVal
+    //  the answer will lie in maxVal and sum range
     for (int i = 0; i < n; i++)
     {
         sum += arr[i];
@@ -53,7 +56,7 @@ int main()
     vector<int> arr = {40, 30, 10, 20};
     int n = arr.size();
     int m = 2;
-    cout <<"Time taken is :: "<< minTime(arr, n, m) << endl;
+    cout << "Time taken is :: " << minTime(arr, n, m) << endl;
 
     return 0;
 }
