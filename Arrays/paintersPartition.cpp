@@ -17,6 +17,8 @@ bool isPossible(vector<int> &arr, int n, int m, int maxTime)
         else
         {
             painters++;
+            if (painters > m)
+                return false;
             time = arr[i]; // reset the time to array value again if new/more painter needed
         }
     }
